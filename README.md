@@ -32,7 +32,7 @@ docker/runc
 | `containerd` | An open and reliable container runtime | [Containerd GitHub](https://github.com/containerd/containerd) [Containerd Official Site](https://containerd.io) |
 | `ctr` | Containerd CLI: `ctr` is a unsupported debug and administrative client for interacting with the containerd daemon | `ctr --help` |
 | `containerd-shim-runc-v2` | Runtime V2 introduces a first class shim API for runtime authors to integrate with containerd | [Containerd GitHub](https://github.com/containerd/containerd/blob/main/core/runtime/v2/README.md) |
-| `dockerd` | `dockerd` is the persistent process that manages containers. (daemon) | [Dcoker Offical Docs](https://docs.docker.com/references/cli/dockerd/) |
+| `dockerd` | `dockerd` is the persistent process that manages containers. (daemon) | [Docker Offical Docs](https://docs.docker.com/references/cli/dockerd/) |
 | `docker-init` | Execute a program under the supervision of a valid init proces | `docker-init --help` |
 | `docker-proxy` | No specs releated | `docker-proxy --help` |
 
