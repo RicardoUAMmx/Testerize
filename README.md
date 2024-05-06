@@ -28,11 +28,11 @@ docker/runc
 
 | Element | Brief Description | Further Info |
 | :-----: | :---------------- | :----------: |
-| `runc`  | CLI tool for spawning and runnig containers according to the OCI spec | [https://github.com/opencontainers/runc][1] [https://opencontainers.org][2] |
-| `containerd` | An open and reliable container runtime | [https://github.com/containerd/containerd][1] [https://containerd.io][2] |
+| `runc`  | CLI tool for spawning and runnig containers according to the OCI spec | https://github.com/opencontainers/runc https://opencontainers.org |
+| `containerd` | An open and reliable container runtime | https://github.com/containerd/containerd https://containerd.io |
 | `ctr` | Containerd CLI: `ctr` is a unsupported debug and administrative client for interacting with the containerd daemon | `ctr --help` |
-| `containerd-shim-runc-v2` | Runtime V2 introduces a first class shim API for runtime authors to integrate with containerd | [https://github.com/containerd/containerd/blob/main/core/runtime/v2/README.md][1] |
-| `dockerd` | `dockerd` is the persistent process that manages containers. (daemon) | [https://docs.docker.com/references/cli/dockerd/][1] |
+| `containerd-shim-runc-v2` | Runtime V2 introduces a first class shim API for runtime authors to integrate with containerd | https://github.com/containerd/containerd/blob/main/core/runtime/v2/README.md |
+| `dockerd` | `dockerd` is the persistent process that manages containers. (daemon) | https://docs.docker.com/references/cli/dockerd/ |
 | `docker-init` | Execute a program under the supervision of a valid init proces | `docker-init --help` |
 | `docker-proxy` | No specs releated | `docker-proxy --help` |
 
