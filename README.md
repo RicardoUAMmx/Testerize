@@ -48,10 +48,39 @@ Since I have installed from binaries and if Id like to integrate with
 ```
 wget https://raw.githubusercontent.com/moby/moby/master/contrib/init/systemd/docker.service
 wget https://raw.githubusercontent.com/moby/moby/master/contrib/init/systemd/docker.socket
+wget https://raw,githubusercontent.com/containerd/containerd/main/containerd.service
 sudo mv docker.service /etc/systemd/system/
 sudo mv docker.socket /etc/systemd/system/
+sudo mkdir -p /usr/local/lib/systemd/system
+sudo mv containerd.service /usr/local/lib/systemd/system/
 sudo chown root:root /etc/systemd/system/docker.service
 sudo chown root:root /etc/systemd/system/docker.socket
+sudo chown root:root /usr/local/lib/systemd/system/containerd.service
 sudo systemctl enable docker.service
 sudo systemctl restart daemon-reload
+```
+
+Modify `containerd.service` file:
+
+```config
+[Service]
+ExecStartPre=-/sbin/modprobe overlay
+ExecStart=/usr/bin/containerd
+```
+
+Create a file `/etc/systemd/system/runc.service`
+
+```config
+[Unit]
+Description=Start My Container
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/runc run -d  --pid-file /run/mycontainerid.pid mycontainerid
+ExecStopPost=/usr/bin/runc delete mycontainerid
+WorkingDirectory=/mycontainer
+PIDFile=/run/mycontainerid.pid
+
+[Install]
+WantedBy=multi-user.target
 ```
