@@ -1,5 +1,31 @@
 # Docker Engine
 
+1. Install static binaries:
+
+```
+wget https://download.docker.com/linux/static/stable/<arch-platform>/docker-<version>.tgz
+```
+
+2. Extract:
+
+```
+tar xzvf /path/to/FILE.tgz
+```
+
+Extracted contents:
+
+```
+docker/containerd
+docker/containerd-shim-runc-v2
+docker/ctr
+docker/dockerd
+docker/docker-init
+docker/docker-proxy
+docker/runc
+```
+
+![Common Docker Architecture](https://containerd.io/img/architecture.png)
+
 Follow the right instructions from the following link:
 [Install Docker Engine from binaries](https://docs.docker.com/engine/install/binaries/).
 I find it convenient to start Docker at boot with systemd, so take a look at
